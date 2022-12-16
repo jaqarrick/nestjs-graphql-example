@@ -1,6 +1,5 @@
 import { CreateCityInput } from './create-city.input';
-import { PartialType } from '@nestjs/mapped-types';
+import { InputType, PartialType } from '@nestjs/graphql';
 
-export class UpdateCityInput extends PartialType(CreateCityInput) {
-  id: number;
-}
+@InputType()
+export class UpdateCityInput extends PartialType(CreateCityInput) {}
